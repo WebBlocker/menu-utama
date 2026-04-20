@@ -11,14 +11,3 @@ if (site) {
   }
 }
 
-function openSite(site) {
-  const blockedSites = ["youtube.com", "facebook.com"];
-
-  const isBlocked = blockedSites.some(b => site.includes(b));
-
-  if (isBlocked) {
-    window.location.href = "blocked.html";
-  } else {
-    window.location.href = "https://" + site;
-  }
-}
